@@ -10,4 +10,6 @@
 
 Made with React.js, create-react-app and multiple libraries on the front-end. Firebase is used for back-end.
 
+### Preview
 
+<img src='https://www.radiomof.mk/wp-content/uploads/2020/08/mapa-702x336.png' alt='map pic'/>
