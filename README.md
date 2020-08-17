@@ -8,6 +8,6 @@
 
 ### Tools
 
-Made with React.js and create-react-app and multiple libraries on the front-end. Firebase is used for back-end.
+Made with React.js, create-react-app and multiple libraries on the front-end. Firebase is used for back-end.
 
 
