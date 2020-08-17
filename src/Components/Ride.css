@@ -1,0 +1,23 @@
+.postCon{
+    width: 340px;
+    padding: 20px;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    margin: auto;
+    margin-top: 30px;
+    vertical-align: top;
+    
+}
+.third{
+    width: 28%;
+    display: inline-block;
+    margin: 10px;
+}
+@media only screen and (max-width: 800px) {
+    .postCon{
+        max-width: 80%;
+        height: fit-content;
+    }
+  }
