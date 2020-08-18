@@ -12,4 +12,6 @@ Made with React.js, create-react-app and multiple libraries on the front-end. Fi
 
 ### Preview
 
-<img src='https://www.radiomof.mk/wp-content/uploads/2020/08/mapa-702x336.png' alt='map pic'/>
+<img src="https://i.ibb.co/4sMDgXS/Google-Chrome-8-18-2020-5-15-06-PM.png" alt="Google-Chrome-8-18-2020-5-15-06-PM" border="0">
+
+<img src="https://i.ibb.co/qr8mqMp/Google-Chrome-8-18-2020-5-14-52-PM.png" alt="Google-Chrome-8-18-2020-5-14-52-PM" border="0">
