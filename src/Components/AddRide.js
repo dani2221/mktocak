@@ -31,7 +31,7 @@ class AddRide extends Component{
     }
     validation = ()=>{
         if(this.state.title.length===0){
-            this.setState({popup:'Enter description'})
+            this.setState({popup:'Please enter description'})
             return false;
         }
         if(this.state.title.length>500){
@@ -39,15 +39,15 @@ class AddRide extends Component{
             return false;
         }
         if(isNaN(this.state.hour)){
-            this.setState({popup:'Enter a valid number in the hour field'})
+            this.setState({popup:'Please enter a valid number in the hour field'})
             return false;
         }
         if(isNaN(this.state.minute)){
-            this.setState({popup:'Enter a valid number in the minute field'})
+            this.setState({popup:'Please enter a valid number in the minute field'})
             return false;
         }
         if(this.state.hour.length===0 || this.state.minute.length===0){
-            this.setState({popup:'Enter a valid number in the hours and minutes field'})
+            this.setState({popup:'Please enter a valid number in the hours and minutes field'})
             return false;
         }
         if(this.state.points.length<2){
