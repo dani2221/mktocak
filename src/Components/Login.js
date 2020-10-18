@@ -68,13 +68,13 @@ class Login extends Component{
         })
     }
 
-    
+
     render(){
         return(
             <div className='middle' style={{border: '1px solid black',padding:'20px',borderRadius:'5px',height:'fit-content',width:'280px',marginLeft:'-160px',marginTop:'-130px'}}>
-                <FacebookLoginButton onClick={()=>this.facebook()}><span>Логирај се со Facebook</span></FacebookLoginButton>
-                <TwitterLoginButton style={{marginTop:'30px'}} onClick={()=>this.twitter()}><span>Логирај се со Twitter</span></TwitterLoginButton>
-                <GoogleLoginButton style={{marginTop:'30px'}} onClick={()=>this.google()}><span>Логирај се со Google</span></GoogleLoginButton>
+                <FacebookLoginButton onClick={()=>this.facebook()}><span>Login with Facebook</span></FacebookLoginButton>
+                <TwitterLoginButton style={{marginTop:'30px'}} onClick={()=>this.twitter()}><span>Login with Twitter</span></TwitterLoginButton>
+                <GoogleLoginButton style={{marginTop:'30px'}} onClick={()=>this.google()}><span>Login with Google</span></GoogleLoginButton>
             </div>
         )
     }

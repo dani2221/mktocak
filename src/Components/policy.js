@@ -3,14 +3,14 @@ import React from 'react'
 const policy = ()=>{
     return(
         <div>
-            <h2>Политика на користење</h2>
-            <p>14 Август 2020</p>
+            <h2>Usage Policy</h2>
+            <p>14 August 2020</p>
             <hr/>
             <ul>
-                <p>Сите локации на места(вело-паркинзи, сервиси, продавници) се сопственост на мкТочак и се наменети за користење само на <a href='/'>mktocak.web.app</a>. Забрането е користење на истите за комерциални цели без одобение од мкТочак</p>
-                <p>Забрането е објавување неточни информации</p>
-                <p>Забрането е користење на овој сајт за илегални активности</p>
-                <p>мкТочак го задржува правото во секое време да го суспендира вашиот профил</p>
+                <p>All locations are owned by the site and intended for use only on the site. It is forbidden to use them for commercial purposes without the approval of the owners</p>
+                <p>It is forbidden to publish or attempt to publish incorrect information</p>
+                <p>It is forbidden to use the site for illegal activities</p>
+                <p>We reserve the right to suspend your account at any time</p>
             </ul>
         </div>
     )

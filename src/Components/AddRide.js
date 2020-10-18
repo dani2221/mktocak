@@ -31,27 +31,27 @@ class AddRide extends Component{
     }
     validation = ()=>{
         if(this.state.title.length===0){
-            this.setState({popup:'Ве молиме внесете опис'})
+            this.setState({popup:'Enter description'})
             return false;
         }
         if(this.state.title.length>500){
-            this.setState({popup:'Описот несмее да биде над 500 букви '+this.state.title.length+'/500'})
+            this.setState({popup:'Description must not be more than 500 characters '+this.state.title.length+'/500'})
             return false;
         }
         if(isNaN(this.state.hour)){
-            this.setState({popup:'Ве молиме внесете валиден број во полето за часови'})
+            this.setState({popup:'Enter a valid number in the hour field'})
             return false;
         }
         if(isNaN(this.state.minute)){
-            this.setState({popup:'Ве молиме внесете валиден број во полето за часови'})
+            this.setState({popup:'Enter a valid number in the minute field'})
             return false;
         }
         if(this.state.hour.length===0 || this.state.minute.length===0){
-            this.setState({popup:'Ве молиме внесете валиден број во полињата за часови и минути'})
+            this.setState({popup:'Enter a valid number in the hours and minutes field'})
             return false;
         }
         if(this.state.points.length<2){
-            this.setState({popup:'Ве молиме означете ја вашата патека со минимум 2 точки'})
+            this.setState({popup:'Use a minimum of 2 points to mark your path'})
             return false;
         }
         return true;
@@ -70,19 +70,19 @@ class AddRide extends Component{
         let time = '';
         if(this.state.hour==0){
         }else if(this.state.hour==1){
-            time='Еден час'
+            time='One hour'
         }
         else{
-            time=this.state.hour + ' часа'
+            time=this.state.hour + ' hours'
         }
         if(this.state.minute==0){}else if(this.state.minute==1){
-            time+=' и една минута'
+            time+=' and one minute'
         }else{
-            time+=' и '+this.state.minute+' минути'
+            time+=' and '+this.state.minute+' minutes'
         }
         if(this.state.hour==0 & this.state.minute!=0){
             time = this.setCharAt(time,1,' ');
-        } 
+        }
         const destructuredPoints = [];
         this.state.points.map(el=>{
             const obj={
@@ -112,10 +112,10 @@ class AddRide extends Component{
                 this.props.history.push('/rides');
             }).catch(error=>{
                 console.log(error)
-                this.setState({popup:'Имаше проблем со испракањето на вашиот пост. Ве молиме обидете се повторно'})
+                this.setState({popup:'There was a problem submitting, please try again'})
             })
         }).catch(err=>{
-            this.setState({popup:'Имаше проблем со испракањето на вашиот пост. Ве молиме обидете се повторно'})
+            this.setState({popup:'There was a problem submitting, please try again'})
         })
     }
 
@@ -125,35 +125,35 @@ class AddRide extends Component{
                 <Popup open={this.state.popup} onClose={()=>this.setState({popup: ''})}>
                     <div>
                         <p style={{textAlign:'center'}}>{this.state.popup}</p>
-                        <p style={{textAlign:'center',fontSize:'10px'}}><i>Кликнете надвор од ова прозорче за да го изгасите</i></p>
+                        <p style={{textAlign:'center',fontSize:'10px'}}><i>Click outside of this window to deselect</i></p>
                     </div>
                 </Popup>
-                <div style={{borderRadius:'10px',minHeight:'350px',padding:'3px',margin:'15px',backgroundColor:'rgba(255,255,255,0.5)',border:'1px solid #2c3e50',padding:'20px'}}> 
+                <div style={{borderRadius:'10px',minHeight:'350px',padding:'3px',margin:'15px',backgroundColor:'rgba(255,255,255,0.5)',border:'1px solid #2c3e50',padding:'20px'}}>
                     <div>
                         <div className='addRideText'>
                             <input style={{marginTop:'50px',width:'100%'}} type='text' placeholder='Внеси опис' value={this.state.title} onChange={(ev)=>this.setState({title:ev.target.value})}/>
-                            <h4>Времетраење на твојата рута (За колку време ја извозе?)</h4>
+                            <h4>Route Duration</h4>
                             <input style={{marginTop:'10px',marginRight:'20px',display:'inline-block',maxWidth:'70px'}} type='text' placeholder='Часови' value={this.state.hour} onChange={(ev)=>this.setState({hour:ev.target.value})}/>
                             <input style={{marginTop:'10px',display:'inline-block',maxWidth:'70px'}} type='text' placeholder='Минути' value={this.state.minute} onChange={(ev)=>this.setState({minute:ev.target.value})}/>
                         </div>
                         <div className='addRideMap'>
-                            <h4>Внеси ја твојата рута. Погледни го упатството подоле пред да почнеш!</h4>
+                            <h4>Enter route below</h4>
                             <Map ref={this.child} cancelDefault={true} points={this.state.points} updatePoints={points=>this.updatePoints(points)} canAddPoint={true} smol={true}/>
                         </div>
                     </div>
                     <div style={{textAlign:'center'}}>
-                        <button className='btn draw-border' style={{display:'inline-block',margin:'10px'}} onClick={()=>this.addPointClick()}>Додади точка</button>
-                        <button className='btn draw-border' style={{display:'inline-block',margin:'10px'}} onClick={()=>this.upload()}>Испрати</button>
+                        <button className='btn draw-border' style={{display:'inline-block',margin:'10px'}} onClick={()=>this.addPointClick()}>Add point</button>
+                        <button className='btn draw-border' style={{display:'inline-block',margin:'10px'}} onClick={()=>this.upload()}>Submit</button>
                     </div>
                 </div>
-                <div style={{borderRadius:'10px',minHeight:'350px',padding:'3px',margin:'15px',backgroundColor:'rgba(255,255,255,0.5)',border:'1px solid #2c3e50',padding:'20px'}}> 
-                        <h2>Упатство</h2>
+                <div style={{borderRadius:'10px',minHeight:'350px',padding:'3px',margin:'15px',backgroundColor:'rgba(255,255,255,0.5)',border:'1px solid #2c3e50',padding:'20px'}}>
+                        <h2>Instructions</h2>
                         <hr/>
                         <ol>
-                            <p>1. Движи ја мапата до почетокот на твојата рута</p>
-                            <p>2. Притисни 'Додади точка' за заклучување на таа позиција</p>
-                            <p>3. Обележи го твоето движење со повеќе точки</p>
-                            <p>4. На крај провери дали се е точно и притисни 'Испрати!'</p>
+                            <p>1. Move map to beginning of route</p>
+                            <p>2. Press add point to lock position</p>
+                            <p>3. Mark your route with multiple points</p>
+                            <p>4. Check everything is correct and press submit</p>
                         </ol>
                     </div>
             </div>
