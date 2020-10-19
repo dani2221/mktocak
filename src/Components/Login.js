@@ -52,7 +52,7 @@ class Login extends Component{
             if(user.additionalUserInfo.isNewUser){
                 const customObj = {
                     name: user.user.displayName,
-                    veloPoints: 0,
+                    cyclePoints: 0,
                     photoURL: user.user.photoURL,
                     posts: []
                 }

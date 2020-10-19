@@ -46,7 +46,7 @@ class ModMap extends Component{
                     })
                 const turf1 = turf.lineString(destructuredPoints);
                 this.map.addLayer({
-                    "id": "novo",
+                    "id": "new",
                     "type": "line",
                     "source": {"type": "geojson","data":turf1},
                     "layout": {

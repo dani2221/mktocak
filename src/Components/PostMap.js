@@ -30,7 +30,7 @@ class PostMap extends Component{
             this.displayDefaultMap();
         }}catch(err){console.log(err)}
     }
-    
+
     displayDefaultMap = ()=>{
         const data = this.props.line;
         const destructuredPoints = [];
@@ -42,7 +42,7 @@ class PostMap extends Component{
         }
         const turf1 = turf.lineString(destructuredPoints);
         this.map.addLayer({
-                "id": "novo",
+                "id": "new",
                 "type": "line",
                 "source": {"type": "geojson","data":turf1},
                 "layout": {

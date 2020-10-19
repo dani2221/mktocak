@@ -50,7 +50,7 @@ class User extends Component{
                 <div style={{display:'inline-block',margin:'20px',color:'white'}}>
                     <h1>{this.props.user.displayName}</h1>
                     <p style={{marginBottom:'1px'}}>Cycle Points {this.state.points}</p>
-                    <p style={{margin:'1px'}}><a style={{fontSize:'10px',color:'white'}} href='/velopoeni'><i>Cycle Point?</i></a></p>
+                    <p style={{margin:'1px'}}><a style={{fontSize:'10px',color:'white'}} href='/cyclepoints'><i>Cycle Point?</i></a></p>
                 </div>
                 <button className='btn draw-border' style={{color:'white',boxShadow:'inset 0 0 0 4px white',width:'150px',fontSize:'15px',margin:'auto'}} onClick={this.logOut}>Log Out</button>
             </div>

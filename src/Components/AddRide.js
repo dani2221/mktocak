@@ -131,10 +131,10 @@ class AddRide extends Component{
                 <div style={{borderRadius:'10px',minHeight:'350px',padding:'3px',margin:'15px',backgroundColor:'rgba(255,255,255,0.5)',border:'1px solid #2c3e50',padding:'20px'}}>
                     <div>
                         <div className='addRideText'>
-                            <input style={{marginTop:'50px',width:'100%'}} type='text' placeholder='Внеси опис' value={this.state.title} onChange={(ev)=>this.setState({title:ev.target.value})}/>
+                            <input style={{marginTop:'50px',width:'100%'}} type='text' placeholder='Enter Description' value={this.state.title} onChange={(ev)=>this.setState({title:ev.target.value})}/>
                             <h4>Route Duration</h4>
-                            <input style={{marginTop:'10px',marginRight:'20px',display:'inline-block',maxWidth:'70px'}} type='text' placeholder='Часови' value={this.state.hour} onChange={(ev)=>this.setState({hour:ev.target.value})}/>
-                            <input style={{marginTop:'10px',display:'inline-block',maxWidth:'70px'}} type='text' placeholder='Минути' value={this.state.minute} onChange={(ev)=>this.setState({minute:ev.target.value})}/>
+                            <input style={{marginTop:'10px',marginRight:'20px',display:'inline-block',maxWidth:'70px'}} type='text' placeholder='Hours' value={this.state.hour} onChange={(ev)=>this.setState({hour:ev.target.value})}/>
+                            <input style={{marginTop:'10px',display:'inline-block',maxWidth:'70px'}} type='text' placeholder='Minutes' value={this.state.minute} onChange={(ev)=>this.setState({minute:ev.target.value})}/>
                         </div>
                         <div className='addRideMap'>
                             <h4>Enter route below</h4>
