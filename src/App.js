@@ -47,7 +47,7 @@ class App extends Component {
             <Route path='/contribute/map' render={this.state.rendered?(this.state.user!=null?()=><FullMap/>:()=><Auth user={this.state.user}/>):()=><div className="lds-ring"><div></div><div></div><div></div><div></div></div>} />
             <Route path='/mod/:id/:line' render={this.state.rendered?(this.state.user!=null?()=><ModMap/>:()=><Auth user={this.state.user}/>):()=><div className="lds-ring"><div></div><div></div><div></div><div></div></div>}/>
             <Route exact path='/user' render={this.state.rendered?(()=><Auth user={this.state.user}/>):()=><div className="lds-ring"><div></div><div></div><div></div><div></div></div>}/>
-            <Route path='/velopoeni' component={pointsInfo}/>
+            <Route path='/cyclepoints' component={pointsInfo}/>
             <Route path='/error' component={Error}/>
             <Route path='/addRide' render={()=><AddRide user={this.state.user}/>}/>
             <Route path='/rides' render={()=><RideList user={this.state.user}/>}/>

@@ -172,7 +172,7 @@ class Map extends Component{
             const turf3 =turf.multiLineString(bike3);
 
             this.map.addLayer({
-                "id": "novo",
+                "id": "new",
                 "type": "line",
                 "source": {"type": "geojson","data":turf1},
                 "layout": {
@@ -185,7 +185,7 @@ class Map extends Component{
                 }
             });
             this.map.addLayer({
-                "id": "dobro",
+                "id": "good",
                 "type": "line",
                 "source": {"type": "geojson","data":turf2},
                 "layout": {
@@ -198,7 +198,7 @@ class Map extends Component{
                 }
             });
             this.map.addLayer({
-                "id": "loso",
+                "id": "bad",
                 "type": "line",
                 "source": {"type": "geojson","data":turf3},
                 "layout": {
@@ -237,7 +237,7 @@ class Map extends Component{
             const turf4 =turf.multiLineString(bike4);
 
             this.map.addLayer({
-                "id": "novo",
+                "id": "new",
                 "type": "line",
                 "source": {"type": "geojson","data":turf1},
                 "layout": {
@@ -250,7 +250,7 @@ class Map extends Component{
                 }
             });
             this.map.addLayer({
-                "id": "dobro",
+                "id": "good",
                 "type": "line",
                 "source": {"type": "geojson","data":turf2},
                 "layout": {
@@ -263,7 +263,7 @@ class Map extends Component{
                 }
             });
             this.map.addLayer({
-                "id": "loso",
+                "id": "bad",
                 "type": "line",
                 "source": {"type": "geojson","data":turf3},
                 "layout": {
@@ -276,7 +276,7 @@ class Map extends Component{
                 }
             });
             this.map.addLayer({
-                "id": "losoo",
+                "id": "awful",
                 "type": "line",
                 "source": {"type": "geojson","data":turf4},
                 "layout": {
@@ -295,20 +295,20 @@ class Map extends Component{
             this.requestFullScreen()
         }
         try{
-        this.map.removeLayer('novo');
-        this.map.removeSource('novo');
+        this.map.removeLayer('new');
+        this.map.removeSource('new');
         }catch(err){}
         try{
-        this.map.removeLayer('dobro');
-        this.map.removeSource('dobro');
+        this.map.removeLayer('good');
+        this.map.removeSource('good');
         }catch(err){}
         try{
-        this.map.removeLayer('loso');
-        this.map.removeSource('loso');
+        this.map.removeLayer('bad');
+        this.map.removeSource('bad');
         }catch(err){}
         try{
-        this.map.removeLayer('losoo');
-        this.map.removeSource('losoo');
+        this.map.removeLayer('awful');
+        this.map.removeSource('awful');
         }catch(err){}
         this.placeMarkers.map(el=>{
             try{

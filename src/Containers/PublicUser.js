@@ -44,7 +44,7 @@ class PublicUser extends Component{
                 <div style={{display:'inline-block',margin:'20px',color:'white'}}>
                     <h1>{this.state.name}</h1>
                     <p style={{marginBottom:'1px'}}>Cycle-Points: {this.state.points}</p>
-                    <p style={{margin:'1px'}}><a style={{fontSize:'10px',color:'white'}} href='/velopoeni'><i>Cycle-Points?</i></a></p>
+                    <p style={{margin:'1px'}}><a style={{fontSize:'10px',color:'white'}} href='/cyclepoints'><i>Cycle-Points?</i></a></p>
                 </div>
             </div>
             <div>
