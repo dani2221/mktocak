@@ -72,15 +72,15 @@ export default class FullMap extends Component{
                 <div style={{display:'inline-block',verticalAlign:'top',margin:'5px'}}>
                     <label className='container' style={{cursor:'default'}}>
                         <span style={{width:'10px',height:'10px',borderRadius: '50%',display:'inline-block',backgroundColor:'#98FB98',marginRight:'10px'}}/>
-                        Нова/како нова патека
+                        New Path
                     </label>
                     <label className='container' style={{cursor:'default'}}>
                         <span style={{width:'10px',height:'10px',borderRadius: '50%',display:'inline-block',backgroundColor:'#FCD12A',marginRight:'10px'}}/>
-                        Добра состојба на патека
+                        Good Path Condition
                     </label>
                     <label className='container' style={{cursor:'default'}}>
                         <span style={{width:'10px',height:'10px',borderRadius: '50%',display:'inline-block',backgroundColor:'#B80F0A',marginRight:'10px'}}/>
-                        Лоша состојба на патека
+                        Poor Path Condition
                     </label>
                 </div>
             )
@@ -89,19 +89,19 @@ export default class FullMap extends Component{
                 <div style={{display:'inline-block',verticalAlign:'top',margin:'5px'}}>
                     <label className='container' style={{cursor:'default'}}>
                         <span style={{width:'10px',height:'10px',borderRadius: '50%',display:'inline-block',backgroundColor:'#CC8899',marginRight:'10px'}}/>
-                        На коловоз одвоена од возила
+                        Path on Road
                     </label>
                     <label className='container' style={{cursor:'default'}}>
                         <span style={{width:'10px',height:'10px',borderRadius: '50%',display:'inline-block',backgroundColor:'#009696',marginRight:'10px'}}/>
-                        На тротоар одвоена од пешаци
+                        Path on Pavement - Separated from Pedestrians
                     </label>
                     <label className='container' style={{cursor:'default'}}>
                         <span style={{width:'10px',height:'10px',borderRadius: '50%',display:'inline-block',backgroundColor:'#98BF64',marginRight:'10px'}}/>
-                        На тротоар заедно со пешаци
+                        Pavement with Pedestrians
                     </label>
                     <label className='container' style={{cursor:'default'}}>
                         <span style={{width:'10px',height:'10px',borderRadius: '50%',display:'inline-block',backgroundColor:'#893101',marginRight:'10px'}}/>
-                        Сосема одвоена или offroad
+                        Completely Separate/Offroad
                     </label>
                 </div>
             )
@@ -113,15 +113,15 @@ export default class FullMap extends Component{
                 <div style={{height:'fit-content',padding:'25px',backgroundColor:'#2c3e40',color:'white'}}>
                     <div style={{display:'inline-block'}}>
                         <Map ref={this.child} canAddPoint={false} points={[]} place={this.state.place} dontShop={this.state.shop} dontPark={this.state.park} dontService={this.state.service} cngPark={this.park} cngService={this.service} cngShop={this.shop} changeStatePlace={this.stateClicked} stateClick={this.state.state} fullScreen={this.state.fullScreen} exitFull={this.exitFull}/>
-                        <a href='/contribute' style={{color:'whitesmoke',textAlign:'center',display:'block'}}>Знаеш вело-патеки или места кои ги нема на мапата?</a>
+                        <a href='/contribute' style={{color:'whitesmoke',textAlign:'center',display:'block'}}>Do you know paths or places that are not on the map?</a>
                     </div>
                     <div style={{display:'inline-block',verticalAlign:'top',margin:'30px',marginBottom:'0px'}}>
                         <div style={{borderRadius:'10px',height:'fit-content',padding:'20px',margin:'10px',backgroundColor:'rgba(255,255,255,0.1)',border:'1px solid white'}}>
-                            <label className='container'>Состојба на вело-патеките
+                            <label className='container'>Bike Path Condition
                                 <input type='checkbox' checked={this.state.state} onChange={()=>this.setState({state: !this.state.state,place: !this.state.place})}/>
                                 <span className='checkmark'></span>
                             </label>
-                            <label className='container'>Местоположба на вело-патеките
+                            <label className='container'>Bike Path Location
                                 <input type='checkbox' checked={this.state.place} onChange={()=>this.setState({state: !this.state.state,place: !this.state.place})}/>
                                 <span className='checkmark'></span>
                             </label>
@@ -132,22 +132,22 @@ export default class FullMap extends Component{
                                 <label className='container' onClick={()=>this.setState({park: !this.state.park})}>
                                     <img style={{width:'30px',verticalAlign:'middle'}} src={img1} alt='Please reload the browser'/>
                                     <span style={{margin:'10px'}}></span>
-                                    Вело-паркинзи
+                                    Bicicle Parking
                                 </label>
                                 <label className='container' onClick={()=>this.setState({shop: !this.state.shop})}>
                                     <img style={{width:'30px',verticalAlign:'middle'}} src={img2} alt='Please reload the browser'/>
                                     <span style={{margin:'10px'}}></span>
-                                        Продавници
+                                        Stores
                                 </label>
                                 <label className='container' onClick={()=>this.setState({service: !this.state.service})}>
                                     <img style={{width:'30px',verticalAlign:'middle'}} src={img3} alt='Please reload the browser'/>
                                     <span style={{margin:'10px'}}></span>
-                                        Сервиси
+                                        Service
                                 </label>
                             </div>
                         </div>
-                        <button className='btn draw-border' style={{color:'white',boxShadow:'inset 0 0 0 4px white',width:'140px',fontSize:'13px',margin:'auto',marginTop:'30px',marginBottom:'20px'}} onClick={()=>this.fullScreen()}>Full-screen мапа</button>
-                        <p style={{display:'block',fontSize:'9px',textAlign:'center'}}>Full-screen опцијата не е подржана за мобилни телефони</p>
+                        <button className='btn draw-border' style={{color:'white',boxShadow:'inset 0 0 0 4px white',width:'140px',fontSize:'13px',margin:'auto',marginTop:'30px',marginBottom:'20px'}} onClick={()=>this.fullScreen()}>Full-Screen</button>
+                        <p style={{display:'block',fontSize:'9px',textAlign:'center'}}>Full-Screen is not supported on mobile</p>
                     </div>
                 </div>
             </div>

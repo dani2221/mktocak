@@ -91,7 +91,7 @@ class RideList extends Component{
                                 </div>
                             )
                     })}
-                    {(this.props.uid) ? '':(this.state.rides.length%5===0?<button style={{textAlign: 'center',margin:'auto',marginTop:'50px'}} className='btn draw-border' onClick={()=>this.loadMore()}>Прикажи повеќе</button>:'')}
+                    {(this.props.uid) ? '':(this.state.rides.length%5===0?<button style={{textAlign: 'center',margin:'auto',marginTop:'50px'}} className='btn draw-border' onClick={()=>this.loadMore()}>Show More</button>:'')}
                 </div>
             )
         }else{
@@ -104,7 +104,7 @@ class RideList extends Component{
                                 </div>
                             )
                     })}
-                    {(this.props.uid) ? '':(this.state.rides.length%5===0?<button style={{textAlign: 'center',margin:'auto',marginTop:'50px'}} className='btn draw-border' onClick={()=>this.loadMore()}>Прикажи повеќе</button>:'')}
+                    {(this.props.uid) ? '':(this.state.rides.length%5===0?<button style={{textAlign: 'center',margin:'auto',marginTop:'50px'}} className='btn draw-border' onClick={()=>this.loadMore()}>Show More</button>:'')}
                 </div>
             )
         }

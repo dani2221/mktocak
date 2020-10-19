@@ -23,13 +23,13 @@ class App extends Component {
 
   componentDidMount() {
     this.props.firebase.auth.onAuthStateChanged(authUser => {
-      
+
       if(authUser){
         this.setState({user: authUser, rendered:true })
       }else{
         this.setState({user: null, rendered: true });
       }
-        
+
     });
   }
 
@@ -37,8 +37,8 @@ class App extends Component {
     return (
       <div>
         <header className='header'>
-          <p className='par'><a style={{textDecoration:'none',color:'#2c3e50',cursor:'pointer'}} href='/'>мкТочак</a></p>
-          <p className='hbut'><a style={{textDecoration:'none',color:'#2c3e50'}} href='/user'>Профил</a></p>
+          <p className='par'><a style={{textDecoration:'none',color:'#2c3e50',cursor:'pointer'}} href='/'>CS Cycle</a></p>
+          <p className='hbut'><a style={{textDecoration:'none',color:'#2c3e50'}} href='/user'>Profile</a></p>
         </header>
         <Router>
           <Switch>
