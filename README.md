@@ -16,3 +16,13 @@ https://mktocak.web.app
 <img src="https://i.ibb.co/TKRnq70/Google-Chrome-8-18-2020-5-15-06-PM.png" alt="Google-Chrome-8-18-2020-5-15-06-PM" border="0">
 
 <img src="https://i.ibb.co/qr8mqMp/Google-Chrome-8-18-2020-5-14-52-PM.png" alt="Google-Chrome-8-18-2020-5-14-52-PM" border="0">
+
+## Firebase database scheme
+<img src="https://ibb.co/0y00bnt" alt="Google-Chrome-8-18-2020-5-14-52-PM" border="0">
+
+<img src="https://ibb.co/0rFZkd7" alt="Google-Chrome-8-18-2020-5-14-52-PM" border="0">
+
+<img src="https://ibb.co/gT2PDry" alt="Google-Chrome-8-18-2020-5-14-52-PM" border="0">
+
+<img src="https://ibb.co/rmnYKGZ" alt="Google-Chrome-8-18-2020-5-14-52-PM" border="0">
+
