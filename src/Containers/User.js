@@ -49,14 +49,14 @@ class User extends Component{
                 </div>
                 <div style={{display:'inline-block',margin:'20px',color:'white'}}>
                     <h1>{this.props.user.displayName}</h1>
-                    <p style={{marginBottom:'1px'}}>Вело-поени: {this.state.points}</p>
-                    <p style={{margin:'1px'}}><a style={{fontSize:'10px',color:'white'}} href='/velopoeni'><i>вело-поени?</i></a></p>
+                    <p style={{marginBottom:'1px'}}>Cycle Points {this.state.points}</p>
+                    <p style={{margin:'1px'}}><a style={{fontSize:'10px',color:'white'}} href='/cyclepoints'><i>Cycle Point?</i></a></p>
                 </div>
-                <button className='btn draw-border' style={{color:'white',boxShadow:'inset 0 0 0 4px white',width:'150px',fontSize:'15px',margin:'auto'}} onClick={this.logOut}>Одјави се</button>
+                <button className='btn draw-border' style={{color:'white',boxShadow:'inset 0 0 0 4px white',width:'150px',fontSize:'15px',margin:'auto'}} onClick={this.logOut}>Log Out</button>
             </div>
             <div>
-                <h3>Мои возења:</h3>
-                <button className='btn draw-border' style={{fontSize:'15px',margin:'auto'}} onClick={()=>this.props.history.push('/addRide')}>Додади возење</button>
+                <h3>My Routes:</h3>
+                <button className='btn draw-border' style={{fontSize:'15px',margin:'auto'}} onClick={()=>this.props.history.push('/addRide')}>Add Route</button>
                 <RideList uid={this.props.user.uid} user={this.props.user} noOver={true}/>
             </div>
             </div>

@@ -29,7 +29,7 @@ class ModMap extends Component{
             this.map.resize();
         });
     };
-    
+
     displayDefaultMap = ()=>{
         const id = this.props.match.params.id
         const line = this.props.match.params.line
@@ -46,7 +46,7 @@ class ModMap extends Component{
                     })
                 const turf1 = turf.lineString(destructuredPoints);
                 this.map.addLayer({
-                    "id": "novo",
+                    "id": "new",
                     "type": "line",
                     "source": {"type": "geojson","data":turf1},
                     "layout": {
@@ -71,22 +71,22 @@ class ModMap extends Component{
             })
         }
     }
-    da = ()=>{
+    yes = ()=>{
         const db = firebase.firestore();
         if(this.props.match.params.line==0){
             db.collection('mainMap').add({...this.state.data.data()})
-            db.collection('modMap').doc(this.state.data.id).delete() 
-            db.collection('users').doc(this.state.data.data().uid).update({veloPoints: firebase.firestore.FieldValue.increment(30)})     
+            db.collection('modMap').doc(this.state.data.id).delete()
+            db.collection('users').doc(this.state.data.data().uid).update({veloPoints: firebase.firestore.FieldValue.increment(30)})
         }else{
             db.collection('mainPlaces').add({...this.state.data.data()})
             db.collection('modPlaces').doc(this.state.data.id).delete()
-            db.collection('users').doc(this.state.data.data().uid).update({veloPoints: firebase.firestore.FieldValue.increment(10)})     
+            db.collection('users').doc(this.state.data.data().uid).update({veloPoints: firebase.firestore.FieldValue.increment(10)})
         }
     }
-    ne = ()=>{
+    no = ()=>{
         const db = firebase.firestore();
         if(this.props.match.params.line==0){
-            db.collection('modMap').doc(this.state.data.id).delete()      
+            db.collection('modMap').doc(this.state.data.id).delete()
         }else{
             db.collection('modPlaces').doc(this.state.data.id).delete()
         }
@@ -98,8 +98,8 @@ class ModMap extends Component{
             <div ref={el => this.mapContainer = el} className="mapContainer">
             </div>
             {this.state.data ? <p>{JSON.stringify(this.state.data.data())}</p>:''}
-            <button onClick={()=>this.da()}>da</button>
-            <button onClick={()=>this.ne()}>ne</button>
+            <button onClick={()=>this.yes()}>yes</button>
+            <button onClick={()=>this.no()}>no</button>
         </div>
     )}
 

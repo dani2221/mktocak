@@ -23,13 +23,13 @@ class App extends Component {
 
   componentDidMount() {
     this.props.firebase.auth.onAuthStateChanged(authUser => {
-      
+
       if(authUser){
         this.setState({user: authUser, rendered:true })
       }else{
         this.setState({user: null, rendered: true });
       }
-        
+
     });
   }
 
@@ -37,8 +37,8 @@ class App extends Component {
     return (
       <div>
         <header className='header'>
-          <p className='par'><a style={{textDecoration:'none',color:'#2c3e50',cursor:'pointer'}} href='/'>мкТочак</a></p>
-          <p className='hbut'><a style={{textDecoration:'none',color:'#2c3e50'}} href='/user'>Профил</a></p>
+          <p className='par'><a style={{textDecoration:'none',color:'#2c3e50',cursor:'pointer'}} href='/'>CS Cycle</a></p>
+          <p className='hbut'><a style={{textDecoration:'none',color:'#2c3e50'}} href='/user'>Profile</a></p>
         </header>
         <Router>
           <Switch>
@@ -47,7 +47,7 @@ class App extends Component {
             <Route path='/contribute/map' render={this.state.rendered?(this.state.user!=null?()=><FullMap/>:()=><Auth user={this.state.user}/>):()=><div className="lds-ring"><div></div><div></div><div></div><div></div></div>} />
             <Route path='/mod/:id/:line' render={this.state.rendered?(this.state.user!=null?()=><ModMap/>:()=><Auth user={this.state.user}/>):()=><div className="lds-ring"><div></div><div></div><div></div><div></div></div>}/>
             <Route exact path='/user' render={this.state.rendered?(()=><Auth user={this.state.user}/>):()=><div className="lds-ring"><div></div><div></div><div></div><div></div></div>}/>
-            <Route path='/velopoeni' component={pointsInfo}/>
+            <Route path='/cyclepoints' component={pointsInfo}/>
             <Route path='/error' component={Error}/>
             <Route path='/addRide' render={()=><AddRide user={this.state.user}/>}/>
             <Route path='/rides' render={()=><RideList user={this.state.user}/>}/>

@@ -65,17 +65,17 @@ class LandingPage extends Component{
                     <FullMap/>
                 </div>
                 <div style={{padding:'15px'}}>
-                    <h1 style={{color:'#2c3e50'}}>Најнови објави:</h1>
+                    <h1 style={{color:'#2c3e50'}}>Latest Posts</h1>
                     <Ride {...this.state.rides[0]} user={this.props.user} inline={true}/>
                     <Ride {...this.state.rides[1]} user={this.props.user} inline={true}/>
                     <Ride {...this.state.rides[2]} user={this.props.user} inline={true}/>
-                    <button className='btn draw-border' style={{margin:'auto',marginTop:'5px'}} onClick={()=>this.props.history.push('/rides')}>Сите објави</button>
+                    <button className='btn draw-border' style={{margin:'auto',marginTop:'5px'}} onClick={()=>this.props.history.push('/rides')}>All Posts</button>
                 </div>
                 <div style={{borderRadius:'10px',height:'fit-content',padding:'10px',margin:'15px',marginTop:'30px',backgroundColor:'rgba(255,255,255,0.5)',border:'1px solid #2c3e50'}}>
-                    <h1 style={{textAlign:'center'}}><a href='/user' style={{textDecoration:'none',color:'#f39c12'}}>Најави се!</a></h1>
-                    <p style={{display:'inline-block',textAlign:'center',width:'33%',fontSize:'20px'}}><i>Постирај ги твоите возења</i></p>
-                    <p style={{ display:'inline-block',textAlign:'center',width:'33%',fontSize:'20px'}}><i>Учествувај во {'\n'}унапредување на мапата</i></p>
-                    <p style={{ display:'inline-block',textAlign:'center',width:'33%',fontSize:'20px'}}><i>Собирај вело-поени!</i></p>
+                    <h1 style={{textAlign:'center'}}><a href='/user' style={{textDecoration:'none',color:'#f39c12'}}>Log In</a></h1>
+                    <p style={{display:'inline-block',textAlign:'center',width:'33%',fontSize:'20px'}}><i>Post your rides</i></p>
+                    <p style={{ display:'inline-block',textAlign:'center',width:'33%',fontSize:'20px'}}><i>Get involved and improve the map</i></p>
+                    <p style={{ display:'inline-block',textAlign:'center',width:'33%',fontSize:'20px'}}><i>Collect cycle points!</i></p>
                 </div>
                 <div style={{height:'20px',width:'100%',backgroundColor:'#2c3e50',textAlign:'center'}}>
                     <p><a style={{color:'white',textAlign:'center',fontSize:'10px',verticalAlign:'middle'}} href='/policy'>TOS</a></p>
